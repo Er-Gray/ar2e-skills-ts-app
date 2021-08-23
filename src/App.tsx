@@ -1,24 +1,18 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import logo from "./logo.svg";
+import "./App.css";
+import { readdirSync } from 'fs';
 
 function App() {
+  const fileNames=readdirSync("./class_skills",{withFileTypes:true}).filter(dirent => dirent.isDirectory()).map(dirent => dirent.name);
+  console.log(fileNames);
+  const skillData=fileNames.map((fileName)=>{
+    return require(fileName);
+  });
+  console.log(skillData);
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <div className="Search_col"></div>
+      <div className="Skill_col"></div>
     </div>
   );
 }
