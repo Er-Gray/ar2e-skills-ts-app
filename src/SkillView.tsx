@@ -1,8 +1,8 @@
-import React, { ReactElement } from "react";
+import React from "react";
 import "./SkillView.css";
 
-function SkillView(props:any){
-	const view=(
+function SkillView(props:any):React.ReactElement{
+	const view:React.ReactElement=(
 		<table>
 			<tr>
 				<th colSpan={3} className="skill-name cell">{props.skill.skillName}</th>
