@@ -3,10 +3,23 @@ import SkillView from "./SkillView";
 import Search from "./Search";
 import React, { useEffect, useState } from "react";
 
-function App() {
+function App():React.ReactElement {
+  interface skill{
+		skillName:string;
+		timing:string;
+		roll:string;
+		subject:string;
+		range:string;
+		cost:string;
+		maxSL:string;
+		critical:string;
+		useRestraint:string;
+		learnRestraint:string;
+		effect:string;
+	}
   const skillData=require("./class_skills/Skills.json");
   const [viewingClass,setViewingClass]=useState<string>("ウォーリア");
-  const [viewingSkills,setViewingSkills]=useState([]);
+  const [viewingSkills,setViewingSkills]=useState<skill[]>([]);
   useEffect(()=>setViewingSkills(skillData[viewingClass].skills),[viewingClass,skillData]);
   console.log(viewingSkills);
 
