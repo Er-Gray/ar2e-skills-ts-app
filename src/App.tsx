@@ -1,6 +1,7 @@
 import logo from "./logo.svg";
 import "./App.css";
 import SkillView from "./SkillView";
+import Search from "./Search";
 import React, { useEffect, useState } from "react";
 
 function App() {
@@ -12,7 +13,13 @@ function App() {
 
   return (
     <div className="App">
-      <div className="Search_col"></div>
+      <div className="Search_col">
+        <Search
+          skillData={skillData}
+          viewingClass={viewingClass}
+          setViewingClass={setViewingClass}
+        />
+      </div>
       <div className="Skill_col">{viewingSkills.map((skill)=><SkillView skill={skill}/>)}</div>
     </div>
   );
