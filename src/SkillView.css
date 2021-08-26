@@ -1,0 +1,27 @@
+.skill-name {
+  font-size: 2em;
+}
+
+.cell {
+  padding: 10px;
+}
+
+.cell:hover {
+  background-color: rgba(125, 125, 125, 0.6);
+  transition: all 0.5s;
+}
+
+table {
+  width: 85%;
+  border-radius: 5%;
+  border: 2px #ccc solid;
+  table-layout: fixed;
+  margin: auto;
+  margin: 10px 0;
+}
+
+th,
+td {
+  border: 3px #aaa solid;
+  border-radius: 10%;
+}

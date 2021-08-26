@@ -1,18 +1,19 @@
 import logo from "./logo.svg";
 import "./App.css";
-import { readdirSync } from 'fs';
+import SkillView from "./SkillView";
+import React, { useEffect, useState } from "react";
 
 function App() {
-  const fileNames=readdirSync("./class_skills",{withFileTypes:true}).filter(dirent => dirent.isDirectory()).map(dirent => dirent.name);
-  console.log(fileNames);
-  const skillData=fileNames.map((fileName)=>{
-    return require(fileName);
-  });
-  console.log(skillData);
+  const skillData=require("./class_skills/Skills.json");
+  const [viewingClass,setViewingClass]=useState<string>("ウォーリア");
+  const [viewingSkills,setViewingSkills]=useState([]);
+  useEffect(()=>setViewingSkills(skillData[viewingClass].skills),[viewingClass,skillData]);
+  console.log(viewingSkills);
+
   return (
     <div className="App">
       <div className="Search_col"></div>
-      <div className="Skill_col"></div>
+      <div className="Skill_col">{viewingSkills.map((skill)=><SkillView skill={skill}/>)}</div>
     </div>
   );
 }
