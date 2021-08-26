@@ -18,8 +18,9 @@ function SkillView(props:any){
 				<td colSpan={1} className="three-col cell">最大SL:{props.skill.maxSL}</td>
 			</tr>
 			<tr>
+				<td colSpan={1} className="two-col cell">クリティカル:{props.skill.critical}</td>
 				<td colSpan={1} className="two-col cell">使用制限:{props.skill.useRestraint}</td>
-				<td colSpan={2} className="two-col cell">取得制限:{props.skill.learnRestraint}</td>
+				<td colSpan={1} className="two-col cell">取得制限:{props.skill.learnRestraint}</td>
 			</tr>
 			<tr>
 				<td colSpan={3} className="effect cell">{props.skill.effect}</td>

@@ -1,4 +1,3 @@
-import logo from "./logo.svg";
 import "./App.css";
 import SkillView from "./SkillView";
 import Search from "./Search";

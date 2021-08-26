@@ -1,8 +1,9 @@
 import React from "react";
+import "./Search.css";
 
 function Search(props:any){
 	const selectClass=()=>{
-		return props.skillData.map((data:any):React.ReactElement=><option key={data.name} value={data.name}>{data.name}</option>);
+		return Object.values(props.skillData).map((data:any):React.ReactElement=><option key={data.name} value={data.name}>{data.name}</option>);
 	};
 
 	const handleClassChange=(event:any)=>{
@@ -11,7 +12,8 @@ function Search(props:any){
 
 	return (
 		<div>
-			<select name="class" defaultValue={props.viewingClass} onChange={handleClassChange}>
+			<h2>クラス</h2>
+			<select className="selectClass" name="selectClass" defaultValue={props.viewingClass} onChange={handleClassChange}>
 				{selectClass()}
 			</select>
 		</div>

@@ -10,6 +10,7 @@
 				"range":"なし",
 				"cost":"なし",
 				"maxSL":"1",
+				"critical":"なし",
 				"useRestraint":"選択武器使用",
 				"learnRestraint":"なし",
 				"effect":"取得時に「長剣、両手剣、槍、斧」から一つ選ぶ。《アームズマスタリー：選んだ武器》と記載する。選んだ武器の命中判定に+1Dする。このスキルは選んだ武器ごとに別のスキルとして扱う。"
@@ -22,9 +23,41 @@
 				"range":"なし",
 				"cost":"3",
 				"maxSL":"1",
+				"critical":"なし",
 				"useRestraint":"なし",
 				"learnRestraint":"なし",
 				"effect":"白兵攻撃の「射程：5m」となり、エンゲージしていない対象にも白兵攻撃が可能となる。この効果はメインプロセス終了まで持続する。"
+			}
+		]
+	},
+	"メイジ":{
+		"name":"メイジ",
+		"skills":[
+			{
+				"skillName":"アースバレット 魔術《地》",
+				"timing":"メジャー",
+				"roll":"魔術",
+				"subject":"単体",
+				"range":"20m",
+				"cost":"6",
+				"maxSL":"1",
+				"critical":"ダイスロール増加",
+				"useRestraint":"なし",
+				"learnRestraint":"なし",
+				"effect":"魔法攻撃。その攻撃は地属性の魔法ダメージ[2D＋5]となる。その攻撃で対象に1点でもHPダメージを与えた場合、[スリップ]を与える。"
+			},
+			{
+				"skillName":"アースブレイカー",
+				"timing":"パッシブ",
+				"roll":"なし",
+				"subject":"自身",
+				"range":"なし",
+				"cost":"なし",
+				"maxSL":"5",
+				"critical":"なし",
+				"useRestraint":"なし",
+				"learnRestraint":"なし",
+				"effect":"地属性の魔法ダメージを与える魔法攻撃のダメージに+[SL×4]する。"
 			}
 		]
 	}
