@@ -20,7 +20,7 @@ function Search(props:any):React.ReactElement{
 		return Object.values(props.skillData).map((data:skill|any):React.ReactElement=><option key={data.name} value={data.name}>{data.name}</option>);
 	};
 
-	const handleClassChange=(event:any)=>{
+	const handleClassChange=(event: React.ChangeEvent<HTMLSelectElement>):void=>{
 		props.setViewingClass(event.target.value);
 	}
 
