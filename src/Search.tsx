@@ -16,7 +16,7 @@ function Search(props:any):React.ReactElement{
 		effect:string;
 	}
 
-	const selectClass=()=>{
+	const selectClass=():React.ReactElement[]=>{
 		return Object.values(props.skillData).map((data:skill|any):React.ReactElement=><option key={data.name} value={data.name}>{data.name}</option>);
 	};
 
